@@ -72,14 +72,17 @@ textarea, input{
 .note-form button{
   border-radius: 5px;
   background-color: rgb(237, 176, 213);
-  border: none;
+  border: snow;
   padding: 10px;
-  color: snow
+  color: snow;
+  margin: 10px;
 }
+
 .note-form button hover{
   background-color: rgb(159, 218, 244);
   padding: 10px;
   cursor: pointer;
+  border: snow;
 
 }
 
@@ -94,7 +97,7 @@ textarea, input{
 }
 
 .edit-buttons button:last-of-type{
-  background-color: rgb(220,89,89);
+  background-color: #65FAFF;
   color:white;
 }
 
