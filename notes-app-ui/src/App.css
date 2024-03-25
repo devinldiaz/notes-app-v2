@@ -1,10 +1,12 @@
+
 body{
   margin: 30px;
   background: #833ab4;
   background: linear-gradient(to bottom, #65FAFF, #FBB3CF);
   /* background-color: lavender; */
   min-height: 100vh;
-} 
+  animation: gradientAnimation 15s ease infinite alternate;
+}
 
 .app-container{
   grid-template-columns: 1fr;
@@ -28,15 +30,23 @@ body{
   gap: 20px;
 }
 
+
+/* each note */
 .notes-item{
   display: flex;
   flex-direction: column;
-  border: 2px solid #FBB3CF;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+  /*border: 2px solid #FBB3CF;*/
   padding: 10px;
   border-radius: 5px;
   background-color: snow;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+}
+
+.notes-item:hover{
+  border-color: #FBB3CF;
 }
 
 .notes-header{
@@ -50,6 +60,10 @@ body{
   border: none;
   cursor: pointer;
   max-width: fit-content;
+}
+
+.notes-header button hover{
+  color: #ff0062;
 }
 
 h2{
@@ -69,23 +83,25 @@ textarea, input{
   border: 1px solid snow;
 }
 
+/* add note button */
 .note-form button{
   border-radius: 5px;
   background-color: rgb(237, 176, 213);
-  border: snow;
+  border: 2px snow;
   padding: 10px;
   color: snow;
   margin: 10px;
+  transition: border-color 0.3s ease;
 }
 
 .note-form button hover{
   background-color: rgb(159, 218, 244);
-  padding: 10px;
+  padding: 50px;
   cursor: pointer;
   border: snow;
-
 }
 
+/* save and cancel buttons */
 .edit-buttons{
   display: flex;
   justify-content: space-evenly;
@@ -96,11 +112,12 @@ textarea, input{
   flex: 1;
 }
 
+
+/* cancel button */
 .edit-buttons button:last-of-type{
   background-color: #65FAFF;
   color:white;
 }
-
 
 
 /* .App {
